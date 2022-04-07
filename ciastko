@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #guzik{
+            position: fixed;
+            left: 40%;
+            bottom: 0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="karmel()">
+ <button id="guzik" onclick="ciastko()">Akceptuje</button>
+    <script>    
+        function ciastko() {
+           document.cookie = "cookieAccept true"; 
+           document.getElementById('guzik').style.display = "none"
+        }
+        function karmel(){
+        if(document.cookie == "cookieAccept true") 
+        document.getElementById('guzik').style.display = "none"
+    } 
+    </script>
+</body>
+</html>
